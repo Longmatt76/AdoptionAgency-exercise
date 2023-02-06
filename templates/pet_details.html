@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Pet Details{% endblock %}
+{% block content %}
+<h3 class="display-4 text-center">Pet Details</h3>
+<div class="container text-center"><img src="{{pet.photo_url}}" width="720px" height="480px">
+    <ul class="list-group m-5 p-5">
+        <li class="list-group-item bg-light">Name: {{pet.name}}</li>
+        <li class="list-group-item bg-light">Species: {{pet.species}}</li>
+        <li class="list-group-item bg-light">Age: {{pet.age}}</li>
+        <li class="list-group-item bg-light">Notes: {{pet.notes}}</li>
+       <a href="/{{pet.id}}/edit" class="btn btn-primary btn-block"> Edit {{pet.name}}</a>
+      
+      </ul>
+</div>
+{% endblock %}
